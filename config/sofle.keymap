@@ -52,17 +52,17 @@
             display-name = "lower";
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
-// |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
+// |  ESC  |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
 // |   ~   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  -   |   =   |  F12  |
-// |   \   |  +  |  <  |  (   |  [   |  {   |        |  |       |  }   |  ]    |  )    |  >   |   :   |   "   |
-// |       |     |  _  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ,    |  .   |   ?   |   |   |
+// |  TAB  |  \  |  _  |  (   |  [   |  {   |        |  |       |  }   |  ]    |  )    |  +   |   :   |   "   |
+// | SHIFT |  |  |     |      |      |      |        |  |       |      |       |  <    |  >   |   ?   | SHIFT |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&trans    &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8    &kp F9    &kp F10   &kp F11
-&kp TILDE    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp ASTRK &kp MINUS  &kp EQUAL  &kp F12
-&kp BSLH &kp PLUS &kp LT &kp LPAR &kp LBKT  &kp LBRC   &trans &trans  &kp RBRC  &kp RBKT   &kp RPAR    &kp GT    &kp COLON    &kp DQT
-&trans    &trans &kp UNDER &kp PLUS &kp LBRC  &kp RBRC   &trans &trans  &kp LBKT  &kp RBKT &kp COMMA  &kp DOT &kp QMARK  &kp PIPE
-                    &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans
+&kp ESC      &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6        &kp F7     &kp F8      &kp F9     &kp F10     &kp F11
+&kp TILDE    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET     &kp AMPS   &kp ASTRK   &kp MINUS  &kp EQUAL   &kp F12
+&kp TAB      &kp BSLH  &kp UNDER &kp LPAR    &kp LBKT  &kp LBRC   &none  &none   &kp LS(RBKT)  &kp RBKT   &kp RPAR    &kp PLUS   &kp COLON   &kp DQT
+&kp LSHFT    &kp PIPE  &none     &none       &none     &none      &trans &trans  &none         &none      &kp LT      &kp GT     &kp QMARK   &kp RSHFT
+                       &trans    &trans      &trans    &trans     &trans &trans  &trans        &trans     &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
